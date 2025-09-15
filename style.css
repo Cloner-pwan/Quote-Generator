@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Merienda+One");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merienda One", cursive;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #5ca4a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 450px;
+  height: auto;
+  background-color: #f5f7f3;
+  border-radius: 6px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .card_header {
+    text-align: center;
+    font-size: 24px;
+    color: #5ca4a9;
+  }
+  .textPlain {
+    font-size: 16px;
+    text-align: center;
+    color: #5ca4a9;
+  }
+  .author {
+    text-align: end;
+    color: #5ca4a9;
+  }
+  .btn_SocialMedia_container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #newQuoteBtn {
+      width: fit-content;
+      height: fit-content;
+      place-self: end;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: #5ca4a9;
+      color: white;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: capitalize;
+      transition: 300ms;
+      cursor: pointer;
+    }
+    #newQuoteBtn:hover {
+      background-color: #4b898d;
+    }
+    .github_logo {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      place-self: end;
+    }
+  }
+}
+
+@media screen and (min-width: 0) {
+  body {
+    padding: 24px;
+  }
+
+  #container {
+    width: 100%;
+    height: auto;
+  }
+  #newQuoteBtn {
+    width: fit-content;
+    height: fit-content;
+    padding: 4px 8px;
+  }
+  .github_logo {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (min-width: 720px) {
+  #container {
+    width: 450px;
+    height: auto;
+  }
+}
