@@ -31,11 +31,25 @@ class fetchData {
 let quoteEndpoint = new fetchData("https://dummyjson.com/quotes");
 
 let displayQuote = async () => {
-  let res = await quoteEndpoint.fetch();
-  let randint = quoteEndpoint.randomNum(res.quotes.length);
-  let quote = res.quotes[randint].quote;
-  let author = res.quotes[randint].author;
-  quoteEndpoint.htmlWriter(author, quote, "author", "textPlain");
+  // animation
+  const textElement = document.querySelector(".textPlain");
+  const authorElement = document.querySelector(".author");
+  textElement.classList.add("fade-out");
+  authorElement.classList.add("fade-out");
+
+  // fetcthing, writing and fade out animaition
+  setTimeout(async () => {
+    let res = await quoteEndpoint.fetch();
+    let randint = quoteEndpoint.randomNum(res.quotes.length);
+    let quote = res.quotes[randint].quote;
+    let author = res.quotes[randint].author;
+
+    textElement.innerHTML = `" ${quote}`;
+    authorElement.innerHTML = `~ ${author}`;
+
+    textElement.classList.remove("fade-out");
+    authorElement.classList.remove("fade-out");
+  }, 400);
 };
 displayQuote();
 

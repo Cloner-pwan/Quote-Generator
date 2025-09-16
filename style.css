@@ -94,3 +94,17 @@ body {
     height: auto;
   }
 }
+
+/* animations */
+
+.textPlain,
+.author {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
