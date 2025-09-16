@@ -21,6 +21,8 @@ class fetchData {
     let quote = p;
     let select_h1 = document.querySelector(`.${classNameh1}`);
     let select_p = document.querySelector(`.${classNamep}`);
+    select_h1.innerHTML = "~ ";
+    select_p.innerHTML = `" `;
     select_p.insertAdjacentHTML("beforeend", quote);
     select_h1.insertAdjacentHTML("beforeend", author);
   }
